@@ -12,7 +12,9 @@
   "dependencies": {
     "good": "^6.6.3",
     "good-console": "^5.3.2",
+    "handlebars": "^4.0.5",
     "hapi": "^13.3.0",
-    "inert": "^3.2.0"
+    "inert": "^3.2.0",
+    "vision": "^4.1.0"
   }
 }
