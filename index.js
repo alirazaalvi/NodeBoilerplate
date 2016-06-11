@@ -52,7 +52,8 @@ server.views({
   },
   relativeTo: __dirname,
   path: './views',
-  layoutPath: './view/layout',
+  layout: true,
+  layoutPath: './views/layout',
   helpersPath: './views/helpers'
 });
 
