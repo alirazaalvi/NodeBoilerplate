@@ -14,36 +14,36 @@ server.connection({
 
 
 server.register(
-    [
-      require('inert'),
-      {
-        register: Good,
-        options: {
-          reporters: [{
-            reporter: require('good-console'),
-            events: {
-              response: '*',
-              log: '*'
-            }
-          }]
-        }
-      },
-      require('vision')
-    ], (err) => {
-      if (err) {
-        throw err;
+  [
+    require('inert'),
+    {
+      register: Good,
+      options: {
+        reporters: [{
+          reporter: require('good-console'),
+          events: {
+            response: '*',
+            log: '*'
+          }
+        }]
       }
+    },
+    require('vision')
+  ], (err) => {
+    if (err) {
+      throw err;
+    }
 
-      server.log('info', 'Server running at: ' + server.info.uri);
+    server.log('info', 'Server running at: ' + server.info.uri);
 
-      server.route({
-        method: 'GET',
-        path: '/',
-        handler: function (request, reply) {
-          reply.view('index');
-        }
-      });
+    server.route({
+      method: 'GET',
+      path: '/',
+      handler: function (request, reply) {
+        reply.view('index');
+      }
     });
+  });
 
 //setting the templating engine
 server.views({
