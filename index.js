@@ -15,19 +15,6 @@ server.connection({
 
 server.register(
   [
-    require('inert'),
-    {
-      register: Good,
-      options: {
-        reporters: [{
-          reporter: require('good-console'),
-          events: {
-            response: '*',
-            log: '*'
-          }
-        }]
-      }
-    },
     require('vision')
   ], (err) => {
     if (err) {
