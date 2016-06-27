@@ -3,7 +3,7 @@ Included all of the basic libraries which are essential for any web app.
  
 ## Installation (Skip installations if you already have installed mentioned packages.)
 
-Download and install node first.
+Download and install node,npm and then nodemon.
 
 ```bash
 $ npm install 
