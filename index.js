@@ -42,10 +42,14 @@ server.views({
 });
 
 // Start the server
-server.start((err) => {
+if (!module.parent) {
+  server.start((err) => {
 
-  if (err) {
-    throw err;
-  }
-  console.log('Server running at:', server.info.uri);
-});
+    if (err) {
+      throw err;
+    }
+    console.log('Server running at:', server.info.uri);
+  });
+}
+
+module.exports = server;
