@@ -9,25 +9,36 @@ server.connection({
   port: 8000
 });
 
+const goodConsoleOptions = {
+  reporters: {
+    console: [{
+      module: 'good-console'
+    }, 'stdout']
+  }
+};
 
-server.register(
-  [
-    require('vision')
-  ], (err) => {
-    if (err) {
-      throw err;
+server.register([{
+  register: require('vision'),
+  options: {}
+}, {
+  register: require('good'),
+  options: goodConsoleOptions
+}], (err) => {
+
+  if (err) {
+    throw err;
+  }
+
+  server.log('info', 'Server running at: ' + server.info.uri);
+
+  server.route({
+    method: 'GET',
+    path: '/',
+    handler: function (request, reply) {
+      reply.view('index');
     }
-
-    server.log('info', 'Server running at: ' + server.info.uri);
-
-    server.route({
-      method: 'GET',
-      path: '/',
-      handler: function (request, reply) {
-        reply.view('index');
-      }
-    });
   });
+});
 
 //setting the templating engine
 server.views({
