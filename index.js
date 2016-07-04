@@ -38,6 +38,15 @@ server.register([{
       reply.view('index');
     }
   });
+
+  server.route({
+    method: 'GET',
+    path: '/api',
+    handler: function (request, reply) {
+      reply({result: 'success'});
+    }
+  });
+
 });
 
 //setting the templating engine
