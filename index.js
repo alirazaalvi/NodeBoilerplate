@@ -1,4 +1,5 @@
 import Hapi from 'hapi';
+import routesIndex  from './routes/index';
 
 // Create a server with a host and port
 const server = new Hapi.Server();
@@ -30,20 +31,7 @@ server.register([{
 
   server.log('info', 'Server running at: ' + server.info.uri);
 
-  server.route([{
-    method: 'GET',
-    path: '/',
-    handler: function (request, reply) {
-      reply.view('index');
-    }
-  },
-    {
-      method: 'GET',
-      path: '/api',
-      handler: function (request, reply) {
-        reply({result: 'success'});
-      }
-    }]);
+  server.route(routesIndex);
 });
 
 //setting the templating engine
