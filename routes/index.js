@@ -12,6 +12,7 @@ export default [{
     method: 'GET',
     path: '/api',
     handler: function (request, reply) {
-      reply({result: 'success'});
+      let mainController = new MainController(request, reply);
+      mainController.returnJson();
     }
   }];

@@ -7,4 +7,7 @@ export default class MainController {
     this.reply.view('index');
   }
 
+  returnJson() {
+    this.reply({result: 'success'});
+  }
 }
