@@ -23,6 +23,9 @@ server.register([{
 }, {
   register: require('good'),
   options: goodConsoleOptions
+}, {
+  register: require('inert'),
+  options: {}
 }], (err) => {
 
   if (err) {

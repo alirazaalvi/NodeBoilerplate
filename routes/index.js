@@ -1,13 +1,25 @@
 import MainController from '../controllers/MainController';
+import Path from 'path';
 
 export default [{
   method: 'GET',
-  path: '/',
-  handler: function (request, reply) {
-    let mainController = new MainController(request, reply);
-    mainController.returnView();
+  path: '/public/{param*}',
+  handler: {
+    directory: {
+      path: Path.join(__dirname, '..', 'assets/'),
+      redirectToSlash: true,
+      index: true
+    }
   }
 },
+  {
+    method: 'GET',
+    path: '/',
+    handler: function (request, reply) {
+      let mainController = new MainController(request, reply);
+      mainController.returnView();
+    }
+  },
   {
     method: 'GET',
     path: '/api',
