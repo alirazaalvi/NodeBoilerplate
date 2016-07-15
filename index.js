@@ -1,5 +1,7 @@
 import Hapi from 'hapi';
 import routesIndex  from './routes/index';
+import Handlebars from 'handlebars';
+import extend from './views/helpers/handlebars-extend-blocks';
 
 // Create a server with a host and port
 const server = new Hapi.Server();
@@ -40,7 +42,7 @@ server.register([{
 //setting the templating engine
 server.views({
   engines: {
-    html: require('handlebars')
+    html: extend(Handlebars)
   },
   relativeTo: __dirname,
   path: './views',
