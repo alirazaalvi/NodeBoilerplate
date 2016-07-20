@@ -2,6 +2,12 @@
 <link rel="stylesheet" href="public/css/styles.css"/>
 {{/extend}}
 <h1>Welcome to NodeJs!</h1>
+{{#compare apple oranges operator='=='}}
+  You cannot compare apple and bananas.
+{{else}}
+  You still cannot compare apple and bananas.
+{{/compare}}
+
 {{#extend "scripts"}}
   <script src="public/js/custom.js"></script>
 {{/extend}}
