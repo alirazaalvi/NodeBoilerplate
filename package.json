@@ -10,6 +10,7 @@
   "author": "Ali Raza Alvi",
   "license": "ISC",
   "dependencies": {
+    "babel-plugin-transform-es2015-template-literals": "^6.8.0",
     "good": "^7.0.1",
     "good-console": "^6.1.2",
     "handlebars": "^4.0.5",
