@@ -2,6 +2,12 @@ import MainController from '../controllers/MainController';
 import Path from 'path';
 
 export default [{
+  method: '*',
+  path: '/{p*}', // catch-all path
+  handler: function (request, reply) {
+    reply.view('404').code(404);
+  }
+}, {
   method: 'GET',
   path: '/public/{param*}',
   handler: {
