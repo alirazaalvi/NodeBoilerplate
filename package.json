@@ -16,6 +16,7 @@
     "handlebars": "^4.0.5",
     "hapi": "^14.1.0",
     "inert": "^4.0.1",
+    "mongoose": "^4.5.8",
     "vision": "^4.1.0"
   },
   "devDependencies": {

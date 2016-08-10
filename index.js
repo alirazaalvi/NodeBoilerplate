@@ -2,6 +2,19 @@ import Hapi from 'hapi';
 import routesIndex  from './routes/index';
 import Handlebars from 'handlebars';
 import extend from './views/helpers/handlebars-extend-blocks';
+import {getDb} from './helpers';
+
+//just to test mongodb database is connected through mongoose odm.
+//you can safely remove it if you don't want mongodb or mongoose
+const db = getDb();
+db.on('error', console.error.bind(console, 'connection error:'));
+
+db.once('open', function () {
+  console.log('Db is connected');
+});
+/////////////////////////////////////////////////////////
+
+
 
 // Create a server with a host and port
 const server = new Hapi.Server();
