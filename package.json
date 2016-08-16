@@ -28,6 +28,7 @@
     "babel-register": "^6.11.6",
     "code": "^3.0.2",
     "lab": "^10.9.0",
-    "lab-babel": "^1.1.1"
+    "lab-babel": "^1.1.1",
+    "nodemon": "^1.10.0"
   }
 }
