@@ -4,7 +4,7 @@
   "description": "Node Boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js --ignore test/ --exec babel-node --presets es2015",
+    "start": "nodemon index.js --ignore test/ -e js,html --exec babel-node --presets es2015",
     "test": "lab -l -I '__core-js_shared__' -T ./node_modules/lab-babel/lib/"
   },
   "author": "Ali Raza Alvi",
