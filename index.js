@@ -2,17 +2,19 @@ import Hapi from 'hapi';
 import routesIndex  from './routes/index';
 import Handlebars from 'handlebars';
 import extend from './views/helpers/handlebars-extend-blocks';
-import {getDb} from './helpers';
+//Uncomment this line to import mongodb connection helper if you are using mongodb.
+//import {getDb} from './helpers';
 
-//just to test mongodb database is connected through mongoose odm.
-//you can safely remove it if you don't want mongodb or mongoose
-const db = getDb();
+//If you want to connect to mongodb using mongoose then simply uncomment the commented 'Mongodb Connection' block
+//Update the connection string in index.js file inside config folder.
+///////////////////////////Mongodb Connection////////////////////////
+/*const db = getDb();
 db.on('error', console.error.bind(console, 'connection error:'));
 
 db.once('open', function () {
   console.log('Db is connected');
-});
-/////////////////////////////////////////////////////////
+});*/
+///////////////////////////Mongodb Connection////////////////////////
 
 
 
