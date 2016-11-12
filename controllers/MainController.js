@@ -8,6 +8,6 @@ export default class MainController {
   }
 
   returnJson() {
-    this.reply({result: 'success'});
+    this.reply({ result: 'success' });
   }
 }
