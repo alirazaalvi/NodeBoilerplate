@@ -1,5 +1,1 @@
-var toJSON = function(object) {
-  return JSON.stringify(object);
-};
-
-module.exports = toJSON;
+export default object => JSON.stringify(object);
