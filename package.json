@@ -11,13 +11,13 @@
   "author": "Ali Raza Alvi",
   "license": "ISC",
   "dependencies": {
-    "good": "^7.1.0",
-    "good-console": "^6.4.0",
+    "good": "^8.1.2",
+    "good-console": "^8.0.0",
     "handlebars": "^4.0.8",
     "hapi": "^16.1.1",
     "inert": "^4.2.0",
     "mongoose": "^4.9.8",
-    "vision": "^4.1.1"
+    "vision": "^5.4.4"
   },
   "devDependencies": {
     "babel": "^6.23.0",
